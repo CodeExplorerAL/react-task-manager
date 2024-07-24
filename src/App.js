@@ -2,6 +2,7 @@ import React from 'react'
 import Cat from './Welcome' // Props：引入 Welcome 組件
 import Count from './Counter' // State：引入 Counter 組件
 import SimpleCounter from './SimpleCounter' // Lifecycle Methods：引入Timer組件
+import HookCounter from './HookCounter'
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <hr />
       <h3>生命週期方法Lifecycle Methods</h3>
       <SimpleCounter />
+      <hr />
+      <h3>React Hooks</h3>
+      <HookCounter />
     </div>
   )
 }
