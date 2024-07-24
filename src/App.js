@@ -1,12 +1,10 @@
 import React from 'react'
-import Welcome from './Welcome' // 引入 Welcome 組件
+import Cat from './Welcome'
 
 function App() {
   return (
-    <div>
-      <Welcome name="Alice" />
-      <Welcome name="Bob" />
-    </div>
+    // 傳遞 name 屬性到 Welcome 組件
+    <Cat name="AL" />
   )
 }
 
