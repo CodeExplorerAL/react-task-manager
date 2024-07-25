@@ -1,28 +1,26 @@
 import React from 'react'
-import Cat from './Welcome'                 // Props：引入 Welcome 組件
-import Count from './Counter'               // State：引入 Counter 組件
-import SimpleCounter from './SimpleCounter' // Lifecycle Methods：引入 Timer 組件
-import HookCounter from './HookCounter'     // React Hooks：引入 HookCounter 組件
-import ContextAPI from './ContextAPI'       // ContextAPI：引入 ContextAPI 組件
+import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom'; // Router：安裝 React Router，npm install react-router-dom
+import Home from './Home';            // Router：引入 Home 組件
+import About from './About';          // Router：引入 About 組件
+import Contact from './Contact';      // Router：引入 Contact 組件
 
 function App() {
   return (
-    <div>
-      <h3>Props：傳遞 name 屬性到 Welcome 組件</h3>
-      <Cat name="AL" />
-      <hr />
-      <h3>State：組件內部的狀態管理</h3>
-      <Count />
-      <hr />
-      <h3>生命週期方法Lifecycle Methods</h3>
-      <SimpleCounter />
-      <hr />
-      <h3>React Hooks</h3>
-      <HookCounter />
-      <hr />
-      <h3>ContextAPI</h3>
-      <ContextAPI />
-    </div>
+    <>
+    {/* Router：創建路由，Router/Link/Routes/Route */}
+      <Router>
+          <nav>
+          <Link to="/">首頁</Link>｜
+          <Link to="/about">關於我們</Link>｜
+          <Link to="/contact">聯繫我們</Link>
+          </nav>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+          </Routes>
+      </Router>
+    </>
   )
 }
 
