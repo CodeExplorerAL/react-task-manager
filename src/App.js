@@ -1,8 +1,9 @@
 import React from 'react'
-import Cat from './Welcome' // Props：引入 Welcome 組件
-import Count from './Counter' // State：引入 Counter 組件
-import SimpleCounter from './SimpleCounter' // Lifecycle Methods：引入Timer組件
-import HookCounter from './HookCounter'
+import Cat from './Welcome'                 // Props：引入 Welcome 組件
+import Count from './Counter'               // State：引入 Counter 組件
+import SimpleCounter from './SimpleCounter' // Lifecycle Methods：引入 Timer 組件
+import HookCounter from './HookCounter'     // React Hooks：引入 HookCounter 組件
+import ContextAPI from './ContextAPI'       // ContextAPI：引入 ContextAPI 組件
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <hr />
       <h3>React Hooks</h3>
       <HookCounter />
+      <hr />
+      <h3>ContextAPI</h3>
+      <ContextAPI />
     </div>
   )
 }
